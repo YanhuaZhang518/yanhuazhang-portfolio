@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yanhua Zhang | Portfolio · Neon Cyber</title>
+  <meta name="description" content="Yanhua Zhang — About, Hobbies (three cats), Education, Projects, Blog and Contact. Neon cyberpunk theme with animations and interactivity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="scan"></div>
+    <canvas id="p"></canvas>
+   
+  </div>
+  <canvas id="trail"></canvas>
+
+  <header>
+    <div class="container nav">
+      <div class="brand"><img src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='84' height='84'><rect width='100%' height='100%' fill='%2312162b'/><text x='50%' y='54%' text-anchor='middle' fill='%23a7b3ff' font-family='Arial' font-size='22'>YZ</text></svg>" alt="Avatar" /><span>Yanhua Zhang</span></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#hobbies">Meow</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div id="scrollbar" aria-hidden="true"></div>
+  <nav class="pager" aria-label="Page dots">
+    <a href="#about" data-id="about"></a>
+    <a href="#hobbies" data-id="hobbies"></a>
+    <a href="#education" data-id="education"></a>
+    <a href="#projects" data-id="projects"></a>
+    <a href="#blog" data-id="blog"></a>
+    <a href="#contact" data-id="contact"></a>
+  </nav>
+
+  <main id="main" class="container">
+    <section id="about" class="hero page active" data-typing-speed="20">
+      <div class="hero-grid">
+        <div class="tilt">
+          <h1 class="headline reveal"><span class="grad">Yanhua Zhang</span> — Full‑stack Developer</h1>
+          <p class="sub reveal" data-typing-src="M.Eng in Software Engineering (Western University). BSc in Computer Science (Carleton University). Focused on cloud‑native, Kubernetes, CI/CD, ElasticSearch, and React/Node. Led a cloud bookstore and a crypto forecasting engine with emphasis on scalability, reliability, and observability."></p>
+          <div class="reveal" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+            <a class="btn btn-primary" href="mailto:yzha5778@uwo.ca">📧 Email Me</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://github.com/YanhuaZhang518">GitHub</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://linkedin.com/in/yanhuaz-jackie">LinkedIn</a>
+          </div>
+          <div class="stats reveal">
+            <div class="stat"><b>GCP/AWS</b><div class="muted">Cloud experience</div></div>
+            <div class="stat"><b>Docker/K8s</b><div class="muted">Containers/Orchestration</div></div>
+            <div class="stat"><b>React/Node</b><div class="muted">Full‑stack delivery</div></div>
+          </div>
+        </div>
+        <div class="tilt card reveal parallax" id="px">
+          <div class="photo-wrap">
+            <img class="hero-photo" id="heroPhoto" src="image/me.JPG" alt="Photo of Yanhua Zhang" width="1200" height="800" loading="lazy" />
+            <div class="photo-frame"></div>
+          </div>
+          <div class="layer l1"></div>
+          <div class="layer l2"></div>
+          <div class="layer l3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="page" data-typing-speed="26">
+      <h2 class="section-title">Personal Statement</h2>
+      <div class="card reveal">
+        <p class="muted">
+          I hold a Bachelor’s degree in Computer Science from Carleton University and a Master’s degree in Software Engineering from Western University. During my academic years, I discovered that my strengths lie not only in technical skills but also—more importantly—in project coordination and team leadership.
+        </p>
+        <p class="muted">
+          After graduation, driven by a personal passion for the catering industry, I worked in a Japanese BBQ restaurant, progressing from Busser Leader to Manager. In these roles, I managed staff assignments, optimized service workflows, handled urgent customer issues, and coordinated with the kitchen to maintain smooth operations and a high table-turnover rate. I also monitored inventory levels to align front-of-house demand with kitchen capacity. Later, as Kitchen Supervisor at another restaurant, I oversaw ingredient preparation, developed new recipes, and led a small team of chefs.
+        </p>
+        <p class="muted">
+          Although my recent professional experience has been in the catering industry, I have continued to engage with the tech field—supporting peers with mock IT interviews, advising on project planning, and refining workflow processes. Currently, I am also self-studying for the CAPM and PMP certifications, aiming to pass the exams in the near future. I believe these credentials will significantly enhance my project management capabilities and accelerate my career growth.
+          I am excited about the opportunity to contribute to a dynamic and innovative organization, where I can further develop my project management expertise while contributing to meaningful projects. I am particularly drawn to your strong leadership culture, which I believe will both challenge and inspire my professional growth.
+        </p>
+    
+        <!-- 🖼️ Added teammates photo -->
+        <div class="teammates-photo reveal">
+          <img src="image/MasterTeamMates.jpg" alt="Graduate classmates and project teammates" />
+          <p class="caption muted">My graduate classmates — Also my <b>Best</b> project teammates.</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="hobbies" class="page" data-typing-speed="24">
+      <h2 class="section-title">My Three Cats</h2>
+      <p class="muted hobby-intro">I have <b>three cats</b> — playful, cuddly, and foodie — my best teammates during my free time 🐱🐱🐱.</p>
+      <div class="cats">
+        <article class="cat-card reveal">
+          <img src="image/Lisheng.JPG" alt="Cat No.1" width="800" height="600" loading="lazy" />
+          <div class="cat-info">
+            <h3>Li Sheng · Norwegian Forest Cat</h3>
+            <p class="muted">My first adopted cat, a gentle <b>Norwegian Forest</b> beauty who is now 8 years old.  
+              Quiet, shy, and a little quirky — she insists that I watch her eat and scratches the post whenever she feels awkward.  
+              No matter what, she’ll always be my little princess.
+            </p>
+            <div class="chips">
+              <span class="chip">#NorwegianForestCat</span>
+              <span class="chip">#Gentle</span>
+              <span class="chip">#Shy</span>
+              <span class="chip">#Quirky</span>
+              <span class="chip">#LittlePrincess</span>
+            </div>
+          </div>
+        </article>
+        <article class="cat-card reveal">
+          <img src="image/chickenstrip.JPG" alt="Cat No.1" width="800" height="600" loading="lazy" />
+          <div class="cat-info">
+            <h3>Chicken Strip · Siamese Cat</h3>
+            <p class="muted">
+              My second rescue, a wise <b>Siamese</b> now 9 years old — the smartest in the house.  
+              She can sense emotions and react accordingly, with an incredible memory and persistence.  
+              She once figured out where the snacks were stored and learned to open the cabinet to get them when no one was around.
+            </p>
+            <div class="chips">
+              <span class="chip">#Siamese</span>
+              <span class="chip">#Intelligent</span>
+              <span class="chip">#Empathetic</span>
+              <span class="chip">#Persistent</span>
+              <span class="chip">#FoodExplorer</span>
+            </div>
+          </div>
+        </article>
+        <article class="cat-card reveal">
+          <img src="image/Coke.jpg" alt="Cat No.1" width="800" height="600" loading="lazy" />
+          <div class="cat-info">
+            <h3>Coke · Mixed Grey Short-haired Cat</h3>
+            <p class="muted">My roommate’s cat, but we’ve lived together for six years. He is now 7 years old.
+              A strong, gray <b>mixed-breed shorthair</b> with endless energy — the most athletic and playful in the family.  
+              Always running around the house, and yes, definitely the biggest eater too!
+            </p>
+            <div class="chips">
+              <span class="chip">#ShortHair</span>
+              <span class="chip">#Energetic</span>
+              <span class="chip">#Strong</span>
+              <span class="chip">#Playful</span>
+              <span class="chip">#BigEater</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="page" data-typing-speed="22">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline edu" id="eduList"></div>
+    </section>
+
+    <section id="projects" class="page" data-typing-speed="22">
+      <h2 class="section-title">Projects</h2>
+      <div class="filter">
+        <button class="btn btn-primary" data-filter="all">All</button>
+        <button class="btn" data-filter="cloud">Cloud</button>
+        <button class="btn" data-filter="ai">AI/Data</button>
+      </div>
+      <div class="projects" id="projList"></div>
+    </section>
+
+    <section id="blog" class="reveal page" data-typing-speed="24">
+      <h2 class="section-title">Interests · Blog</h2>
+    
+      <div class="card" style="display: grid; gap: 36px;">
+    
+        <!-- 1️⃣ Calligraphy -->
+        <article>
+          <h3>Traditional Chinese Calligraphy Artist</h3>
+          <p class="muted">
+            I began learning traditional Chinese calligraphy at the age of eight as a way to help manage my ADHD.
+            Through years of practice, I gradually developed stronger focus and self-discipline.
+            Calligraphy became more than an art form — it became a meditation in motion that taught me how to find stillness within activity.
+          </p>
+    
+          <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 16px;">
+            <figure style="text-align:center; max-width:280px;">
+              <img src="image/quiet.jpg" alt="Calligraphy artwork 1" style="width:100%; border-radius:12px;">
+              <figcaption style="font-size:14px; color:#b7b7b7; margin-top:6px;">
+                The character means “quiet,” yet the strokes feel lively and energetic.<br>
+              </figcaption>
+            </figure>
+    
+            <figure style="text-align:center; max-width:280px;">
+              <img src="image/fan.jpg" alt="Calligraphy artwork 2" style="width:100%; border-radius:12px;">
+              <figcaption style="font-size:14px; color:#b7b7b7; margin-top:6px;">
+                Written on a traditional Chinese paper fan, featuring a short poem and an orchid.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+    
+        <!-- 2️⃣ Fitness -->
+        <article>
+          <h3>Passionate About Fitness</h3>
+          <p class="muted">
+            I started working out when I was 17, and it has now been nearly a decade.
+            Strength training is not only my favorite form of exercise but also a lifestyle that keeps me disciplined and mentally strong.
+            One day, I hope to formally study exercise science and become a certified personal trainer.
+          </p>
+    
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <figure style="text-align:center; max-width:300px;">
+              <img src="image/fit.jpg" alt="Fitness photo" style="width:100%; border-radius:12px;">
+              <figcaption style="font-size:14px; color:#b7b7b7; margin-top:6px;">
+                I enjoy strength training and the sense of progress that comes with every drop of sweat.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+    
+        <!-- 3️⃣ Cooking & Social Life -->
+        <article>
+          <h3>Cooking and Friendship</h3>
+          <p class="muted">
+            Since childhood, I’ve dreamed of becoming a chef. During my years studying abroad, I often hosted dinner gatherings for friends.
+            Sometimes, I prepared meals for over a dozen people all by myself.
+            Cooking helps me refine my sense of timing and organization — managing multiple dishes simultaneously while maintaining flavor and presentation.
+          </p>
+    
+          <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:16px;">
+            <figure style="text-align:center; max-width:280px;">
+              <img src="image/dinner1.JPG" alt="Cooking photo 1" style="width:100%; border-radius:12px;">
+              <figcaption style="font-size:14px; color:#b7b7b7; margin-top:6px;">
+                A home-style dinner I cooked for friends during my studies abroad — every dish carries the taste of home.
+              </figcaption>
+            </figure>
+    
+            <figure style="text-align:center; max-width:280px;">
+              <img src="image/dinner2.jpg" alt="Cooking photo 2" style="width:100%; border-radius:12px;">
+              <figcaption style="font-size:14px; color:#b7b7b7; margin-top:6px;">
+                A photo taken during one of our dinner gatherings — food always brings people closer together.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    
+
+    <!-- ============ CONTACT (single centered panel) ============ -->
+    <section id="contact" class="page" data-typing-speed="28">
+      <h2 class="section-title">Contact</h2>
+      <div class="wrap contact-grid">
+        <div class="panel reveal">
+          <h3>Contact Info</h3>
+          <p class="muted" style="margin-top:4px">Prefer email for opportunities and collaboration. I usually reply within 24 hours.</p>
+          <div class="info-list" style="margin-top:12px">
+            <div class="info-item">
+              <span>📧</span>
+              <div>
+                <b>Email</b>
+                <div class="meta">yzha5778@uwo.ca</div>
+              </div>
+              <div class="act">
+                <a class="btn btn-primary" href="mailto:yzha5778@uwo.ca">Write</a>
+                <button class="btn" id="copyEmail" type="button">Copy</button>
+              </div>
+            </div>
+            <div class="info-item">
+              <span>📞</span>
+              <div>
+                <b>Phone</b>
+                <div class="meta">+1 (343) 777-8688</div>
+              </div>
+              <div class="act">
+                <a class="btn btn-primary" href="tel:+13437778688">Call</a>
+                <button class="btn" id="copyPhone" type="button">Copy</button>
+              </div>
+            </div>
+            <div class="info-item">
+              <span>💼</span>
+              <div>
+                <b>LinkedIn</b>
+                <div class="meta">linkedin.com/in/yanhuaz-jackie</div>
+              </div>
+              <div class="act">
+                <a class="btn" target="_blank" rel="noopener" href="https://linkedin.com/in/yanhuaz-jackie">Open</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <span>🧑‍💻</span>
+              <div>
+                <b>GitHub</b>
+                <div class="meta">github.com/YanhuaZhang518</div>
+              </div>
+              <div class="act">
+                <a class="btn" target="_blank" rel="noopener" href="https://github.com/YanhuaZhang518">Open</a>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+            <a class="btn" href="assets/resume/resume.pdf" download>⬇️ Download Résumé (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;color:var(--muted)">
+      <span>© <span id="year"></span> Yanhua Zhang</span>
+      <span>·</span>
+      <a href="#about" class="muted">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="dock">
+    <button class="btn" id="lang">🇺🇸 / 🇨🇳</button>
+    <button class="btn" id="color">🎨 Accent</button>
+  </div>
+
+ 
+
+  <script type="application/json" id="site-data">
+    {
+      "education": [
+        {
+          "school": "Western University",
+          "degree": "M.Eng in Software Engineering",
+          "time": "Sep 2023 — Aug 2024 · London, Canada",
+          "bullets": [
+            "Courses: Machine Learning, Data Management & Applications, Web Application Development"
+          ]
+        },
+        {
+          "school": "Carleton University",
+          "degree": "B.CompSci (Honors)",
+          "time": "Sep 2019 — May 2023 · Ottawa, Canada",
+          "bullets": [
+            "Courses: Discrete Structures, Web Fundamentals, OO Software Engineering, DBMS, Project Management"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "title": "Cloud-based Bookstore · Team Lead",
+          "img": "image/onlinebookstore.JPG",
+          "desc": "GKE multi-zone + GitLab/Helm CI/CD; ElasticSearch + recommendation engine — high concurrency stability and strong relevance.",
+          "tags": ["GCP", "Kubernetes", "ElasticSearch", "React", "Node/Express"],
+          "url": "https://github.com/YanhuaZhang518",
+          "bucket": "cloud"
+        },
+        {
+          "title": "Cryptocurrency Price Forecasting Engine · Team Lead",
+          "img": "image/crypto.JPG",
+          "desc": "AWS EC2 + Docker; deep-learning + lightweight real-time dual-model; Grafana monitoring and API docs.",
+          "tags": ["AWS", "Docker", "Grafana", "Python"],
+          "url": "https://github.com/YanhuaZhang518",
+          "bucket": "ai"
+        }
+      ]
+    }
+    </script>
+    
+
+  <script src="js/main.js"></script>
+</body>
+</html>
