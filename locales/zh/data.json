@@ -1,0 +1,35 @@
+{
+    "education": [
+      {
+        "school": "Western University（西安大略大学）",
+        "degree": "软件工程硕士（M.Eng）",
+        "time": "2023年9月 — 2024年8月 · 加拿大伦敦",
+        "bullets": ["课程：机器学习、数据管理与应用、Web 应用开发"]
+      },
+      {
+        "school": "Carleton University（卡尔顿大学）",
+        "degree": "计算机科学学士（荣誉）",
+        "time": "2019年9月 — 2023年5月 · 加拿大渥太华",
+        "bullets": ["课程：离散结构、Web 基础、面向对象软件工程、数据库系统、项目管理"]
+      }
+    ],
+    "projects": [
+      {
+        "title": "云端书店 · 负责人",
+        "img": "image/onlinebookstore.JPG",
+        "desc": "GKE 多可用区 + GitLab/Helm CI/CD；ElasticSearch + 推荐引擎——高并发稳定、相关性强。",
+        "tags": ["GCP", "Kubernetes", "ElasticSearch", "React", "Node/Express"],
+        "url": "https://github.com/YanhuaZhang518",
+        "bucket": "cloud"
+      },
+      {
+        "title": "加密货币价格预测引擎 · 负责人",
+        "img": "image/crypto.JPG",
+        "desc": "Python + TensorFlow；通过 The Graph 获取 Uniswap v3 链上数据；基于 LSTM 的 ETH 预测，并与 GRU 与 Transformer 基线对比。",
+        "tags": ["Python", "TensorFlow", "The Graph", "LSTM", "GRU", "Transformer"],
+        "url": "https://github.com/YanhuaZhang518",
+        "bucket": "ai"
+      }
+    ]
+  }
+  
