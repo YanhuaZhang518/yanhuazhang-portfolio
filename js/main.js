@@ -73,7 +73,7 @@
         const img = document.createElement('img');
         img.src = p.img;
         img.alt = p.title;
-        // 图片兜底（如果路径写错或文件缺失）
+        
         img.onerror = () => {
           img.src =
             'data:image/svg+xml;utf8,' +
