@@ -1,4 +1,4 @@
-# Yanhua Zhang — Personal Portfolio (Neon Cyber Edition)
+# Yanhua Zhang — Personal Portfolio 
 
 Split from a single-file HTML into a professional structure with external CSS/JS.
 
