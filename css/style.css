@@ -148,3 +148,78 @@
         cursor: none;
       }
       
+
+      /* ===== Mobile & Touch Optimizations ===== */
+
+/* 触控设备恢复可见光标，避免选中文本时“无指针”的怪异体验 */
+@media (pointer: coarse) {
+  body { cursor: auto; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+}
+
+/* iPhone 刘海安全区 & 顶部吸顶栏优化 */
+header {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* 760px 以下：改为单列、放大触控目标、减少外边距 */
+@media (max-width: 760px) {
+  .container { padding: 0 16px; }
+
+  header .nav { padding: 12px 0; }
+  .nav a { margin-left: 12px; font-weight: 800; }
+
+  .hero { padding: 74px 0 18px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 18px; }
+
+  .headline { font-size: clamp(28px, 8vw, 40px); line-height: 1.12; }
+
+  .sub { font-size: 14px; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat b { font-size: 18px; }
+
+  section { padding: 64px 0 60px; }
+
+  /* 卡片与项目：单列，缩小内边距，减轻阴影（提升性能） */
+  .card, .project .content, .cat-info { padding: 14px; box-shadow: 0 10px 32px rgba(0,0,0,.35); }
+  .projects { grid-template-columns: 1fr; gap: 14px; }
+  .project { grid-template-columns: 1fr; }
+
+  /* 按钮：更大触控区、更紧凑视觉 */
+  .btn { padding: 12px 16px; border-radius: 14px; }
+  .filter .btn { padding: 10px 12px; }
+
+  /* 固定 dock 与分页点更亲和拇指区 */
+  .dock { right: 12px; bottom: 14px; gap: 8px; }
+  .pager { right: 10px; gap: 8px; }
+  .pager a { width: 12px; height: 12px; }
+
+  /* 视差/大背景在小屏淡化以稳帧率 */
+  .parallax { height: 220px; box-shadow: 0 0 0 1px var(--border), 0 0 18px rgba(124,58,237,.2); }
+  .l1, .l2, .l3 { filter: blur(16px) brightness(.9); opacity: .8; }
+
+  /* 图片更稳健的显示 */
+  .hero-photo { object-position: center; }
+}
+
+/* 420px 以下：进一步收窄网格与文字尺寸 */
+@media (max-width: 420px) {
+  .stats { grid-template-columns: 1fr; }
+  .section-title { font-size: 22px; }
+  .sub { font-size: 13px; }
+  .btn { padding: 12px 14px; }
+}
+
+/* 小屏或矮屏：弱化滚动吸附避免“卡段落” */
+@media (max-width: 760px), (max-height: 700px) {
+  html, body { scroll-snap-type: none; }
+  section.page { min-height: auto; }
+}
+
+/* 减少动效：系统层面的“减少动态”尊重 */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; }
+  .scan { animation: none; }
+  * { scroll-behavior: auto; }
+}
